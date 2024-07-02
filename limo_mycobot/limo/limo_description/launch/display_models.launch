@@ -1,0 +1,11 @@
+<launch>
+        <arg name="model" />
+	<arg name="robot_namespace" default="/"/>
+        <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node> -->
+        <param name="robot_description" command="$(find xacro)/xacro '$(find limo_description)/urdf/limo_base.urdf' robot_namespace:=$(arg robot_namespace)" />
+
+        <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" ></node>
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find limo_description)/rviz/model_display.rviz" />
+</launch>

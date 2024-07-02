@@ -1,0 +1,17 @@
+<robot name="limo_mycobot" xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:include filename="$(find mycobot_description)/urdf/mycobot/mycobot_urdf.urdf" />
+    <xacro:include filename="$(find limo_description)/urdf/limo_four_diff.xacro" />
+
+    <joint
+      name="limo_mycobot"
+      type="fixed">
+      <origin
+        xyz="0.0 0.0 0.0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="joint1" />
+    </joint>
+
+</robot>

@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: limo_description
+    relative_path: urdf/limo_base.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/limo_xacro.srdf
+  CONFIG:
+    author_name: agilex
+    author_email: shiqi.zhao@agilex.ai
+    generated_timestamp: 1719804171
